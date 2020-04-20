@@ -9,6 +9,7 @@ function Counter() {
       <button onClick={() => setCount(count + 1)}>+1</button>
       <button onClick={() => setCount(count - 1)}>-1</button>
       <input
+        value={isNaN(count) ? setCount(0) : count}
         onChange={(e) => setCount(parseInt(e.target.value))}
         placeholder="valeur de départ"
       ></input>
